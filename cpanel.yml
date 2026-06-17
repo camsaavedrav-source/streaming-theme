@@ -1,0 +1,6 @@
+---
+deployment:
+tasks:
+- export DEPLOYPATH=/home/camsaavedrav/public_html/tarea-4/wp-content/themes/streaming-theme/
+- /bin/mkdir -p $DEPLOYPATH
+- /bin/cp -R * $DEPLOYPATH
