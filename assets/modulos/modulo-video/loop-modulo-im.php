@@ -4,7 +4,7 @@
         $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; 
         
         $args = array( 
-            'post_type'      => 'post',
+            'post_type'      => 'video',
             'post_status'    => 'publish',
             'orderby'        => 'date', 
             'order'          => 'ASC', 
@@ -13,9 +13,9 @@
 
             'tax_query' => array(
                 array(
-                    'taxonomy' => 'category',
+                    'taxonomy' => 'artista-musical',
                     'field'     => 'slug',
-                    'terms'     => 'video',
+                    'terms'     => 'imagine-dragons',
                 ),
             ),
         );
@@ -28,26 +28,15 @@
         $loop_post->the_post(); 
         ?>
 
-
-<div class="card" style="width: 18rem;">
-  <div><?php the_content();?></div>
+<div class="card">
+  <?php 
+  $image = get_field('imagen_destacada');
+  $size = 'thumbnail'; 
+  if( $image ) {
+    echo wp_get_attachment_image( $image, $size );} ?>
   <div class="card-body">
-    <p class="card-title"><?php echo get_the_title(); ?></p>
+    <h5 class="card-title"><?php echo get_the_title(); ?></h5>
   </div>
-</div>
-
-<div>
-<h4><?php echo esc_html( get_field('titulo_del_video') ); ?></h4>
-<p><?php echo wp_kses_post ( get_field('descripcion_del_video') ); ?></p>
-<a href="<?php echo esc_attr( get_field('url_del_video') ); ?>"><?php echo esc_attr( get_field('') ); ?></a>
-<?php 
-$image = get_field('imagen_destacada');
-$size = 'thumbnail'; 
-if( $image ) {
-    echo wp_get_attachment_image( $image, $size );
-} ?>
-<a href="<?php the_field('categoria'); ?>">Categoria: </a>
-<p><?php echo esc_html( get_field('duracion') ); ?></p>
 </div>
 
 

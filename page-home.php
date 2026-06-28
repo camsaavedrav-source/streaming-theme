@@ -35,6 +35,14 @@ $imagen_destacada = get_the_post_thumbnail_url(get_the_ID(), 'full');
 ?>
 <div class="carousel-item <?php echo $activo; ?>">
 <img src="<?php echo esc_url($imagen_destacada); ?>" class="d-block w-100" alt="<?php echo get_the_title(); ?>">
+<div class="carousel-caption d-none d-md-block">
+  <h5><?php echo get_the_title(); ?></h5>
+  <p><?php echo get_the_excerpt(); ?></p>
+   <a href="<?php echo esc_url( get_permalink() ); ?>" class="btn btn-primary">
+    <i class="bi bi-caret-right-fill"></i>Ver más</a>
+  <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
+  <button type="button" class="btn"><i class="bi bi-info-circle"></i></button>
+</div>  
 </div>
 <?php
 $indice++;
@@ -54,9 +62,37 @@ wp_reset_postdata();
 </button>
 </div>
 
-<div>
- <h3></h3> 
+<section>
+<div>  
+<h4>My Chemical Romance</h4>
+<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-mcr.php'; ?>
 </div>
+
+<div>
+<h4>Melanie Martinez</h4>
+<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-mm.php'; ?>
+</div>
+
+<div>
+<h4>Imagine Dragons</h4>
+<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-im.php'; ?>
+</div>
+
+<div>
+<h4>Lady Gaga</h4>
+<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-lg.php'; ?>
+</div>
+
+<div>
+<h4>Otros</h4>
+<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-otros.php'; ?>
+</div>
+</section>
 
 </main><!-- #main -->
 
