@@ -13,24 +13,64 @@
  */
 
 get_header();
+
+$page = get_queried_object();
+$term = get_term_by('slug', $page->post_name, 'artista-musical');
 ?>
 
+
 	<main id="primary" class="site-main">
+	<div>
+	<h2><?php echo get_the_title();?></h2>
+	<?php if ( isset($term->description) && $term->description ) : ?>
+    <p><?php echo esc_html( $term->description ); ?></p>
+    <?php endif; ?>
+	<div>
+	   <?php
+        $args = array(
+            'post_type'      => 'video',
+            'post_status'    => 'publish',
+			'orderby'        => 'date', 
+            'order'          => 'ASC', 
+            'paged'          => $paged, 
+            'posts_per_page' => 10,
+            'tax_query'      => array(
+                array(
+                    'taxonomy' => 'artista-musical',
+                    'field'    => 'slug',
+                    'terms'    => $term->slug ?? '',
+                ),
+            ),
+        );
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+        $query = new WP_Query( $args );
 
-			get_template_part( 'template-parts/content', 'page' );
+		if ($query->have_posts()) :
+			while ($query->have_posts()) : $query->the_post();
+	?>
+	<div class="card">
+  <?php 
+  $image = get_field('imagen_destacada');
+  $size = 'thumbnail'; 
+  if( $image ) {
+    echo wp_get_attachment_image( $image, $size );} ?>
+  <div class="card-body">
+  <h5 class="card-title"><?php echo get_the_title(); ?></h5>
+  </div>
+  </div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+<?php
+    endwhile;
+else :
+    ?>
 
-		endwhile; // End of the loop.
-		?>
+<p>No hay noticias disponibles en esta taxonimía.</p>
 
+<?php
+endif;
+
+wp_reset_postdata();
+?>
 	</main><!-- #main -->
 
 <?php
