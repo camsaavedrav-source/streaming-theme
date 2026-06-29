@@ -15,6 +15,10 @@
           'fallback_cb'    => 'bootstrap_5_wp_nav_menu_walker::fallback',
       ));
       ?>
+       <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+      </form>
     </div>
   </div>
 </nav>
