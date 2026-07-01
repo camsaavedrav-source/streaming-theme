@@ -64,40 +64,35 @@ wp_reset_postdata();
 
 <section>
 <div class="row d-flex justify-content-center">  
-<h4>My Chemical Romance</h4>
-<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<h4>My Chemical Romance<a href=""><i class="bi bi-arrow-right-circle-fill ms-2"></i></a></h4>
 <div class="row row-cols-4 pb-5 ps-5">
 <?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-mcr.php'; ?>
 </div>
 </div>
 
 <div class="row d-flex justify-content-center">
-<h4>Melanie Martinez</h4>
-<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<h4>Melanie Martinez <a href=""><i class="bi bi-arrow-right-circle-fill ms-2"></i></a></h4>
 <div class="row row-cols-4 pb-5 ps-5">
 <?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-mm.php'; ?>
 </div>
 </div>
 
 <div class="row d-flex justify-content-center">
-<h4>Imagine Dragons</h4>
-<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<h4>Imagine Dragons <a href=""><i class="bi bi-arrow-right-circle-fill ms-2"></i></a></h4>
 <div class="row row-cols-4 pb-5 ps-5">
 <?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-im.php'; ?>
 </div>
 </div>
 
 <div class="row d-flex justify-content-center">
-<h4>Lady Gaga</h4>
-<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<h4>Lady Gaga <a href=""><i class="bi bi-arrow-right-circle-fill ms-2"></i></a></h4>
 <div class="row row-cols-4 pb-5 ps-5">
 <?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-lg.php'; ?>
 </div>
 </div>
 
 <div class="row d-flex justify-content-center">
-<h4>Otros</h4>
-<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<h4>Otros <a href=""><i class="bi bi-arrow-right-circle-fill ms-2"></i></a></h4>
 <div class="row row-cols-4 pb-5 ps-5">
 <?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-otros.php'; ?>
 </div>
