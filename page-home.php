@@ -15,12 +15,12 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="container">
 
 <?php
 $args = array(
     'post_type' => 'video',
-    'posts_per_page' => 3
+    'posts_per_page' => 5
 );
 $query = new WP_Query($args);
 echo 'Posts encontrados: ' . $query->found_posts;
@@ -63,34 +63,44 @@ wp_reset_postdata();
 </div>
 
 <section>
-<div>  
+<div class="row d-flex justify-content-center">  
 <h4>My Chemical Romance</h4>
 <a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<div class="row row-cols-4 pb-5 ps-5">
 <?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-mcr.php'; ?>
 </div>
+</div>
 
-<div>
+<div class="row d-flex justify-content-center">
 <h4>Melanie Martinez</h4>
 <a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<div class="row row-cols-4 pb-5 ps-5">
 <?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-mm.php'; ?>
 </div>
+</div>
 
-<div>
+<div class="row d-flex justify-content-center">
 <h4>Imagine Dragons</h4>
 <a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<div class="row row-cols-4 pb-5 ps-5">
 <?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-im.php'; ?>
 </div>
-
-<div>
-<h4>Lady Gaga</h4>
-<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
-<?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-lg.php'; ?>
 </div>
 
-<div>
+<div class="row d-flex justify-content-center">
+<h4>Lady Gaga</h4>
+<a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<div class="row row-cols-4 pb-5 ps-5">
+<?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-lg.php'; ?>
+</div>
+</div>
+
+<div class="row d-flex justify-content-center">
 <h4>Otros</h4>
 <a href=""><i class="bi bi-arrow-right-circle-fill"></i></a>
+<div class="row row-cols-4 pb-5 ps-5">
 <?php include get_template_directory() . '/assets/modulos/modulo-video/loop-modulo-otros.php'; ?>
+</div>
 </div>
 </section>
 

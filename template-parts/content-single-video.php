@@ -46,9 +46,11 @@ endif; ?>
    <li class="list-group-item"><?php echo $sub_value;?>: <span><?php echo $sub_value2;?></span></li>
   </ul>
 </div>
+</section>
+<section> 
 <div>
-<h3>Letra</h3>
+<h3>Letra Ingles</h3>
 <?php echo nl2br( get_field('letra_ingles') ); ?>    
 </div>   
-</section>    
+</section>
 </article>

@@ -19,13 +19,13 @@ $term = get_term_by('slug', $page->post_name, 'artista-musical');
 ?>
 
 
-	<main id="primary" class="site-main">
-	<div>
+	<main id="primary" class="container">
+	<div class="row">
 	<h2><?php echo get_the_title();?></h2>
 	<?php if ( isset($term->description) && $term->description ) : ?>
     <p><?php echo esc_html( $term->description ); ?></p>
     <?php endif; ?>
-	<div>
+	<div class="row row-cols-4 pb-5 ps-5">
 	   <?php
         $args = array(
             'post_type'      => 'video',

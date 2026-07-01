@@ -1,0 +1,39 @@
+.footer-bottom {
+    border-top: 1px solid;
+    padding: 25px 0;
+}
+
+/* El ul ES .menu, no está dentro de .menu */
+ul#menu-footer,
+ul.menu {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none !important;
+    padding: 0 !important;
+    padding-inline-start: 0 !important; /* override del navegador */
+    margin: 0 !important;
+    gap: 20px;
+}
+
+ul#menu-footer li,
+ul.menu li {
+    display: inline-block;
+}
+
+ul#menu-footer li a,
+ul.menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer#colophon {
+    background-color: #a47dab;
+}
+a{
+    color: black !important;
+}
+a:hover{
+    color: white !important;
+}

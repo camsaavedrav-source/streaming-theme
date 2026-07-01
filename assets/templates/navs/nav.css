@@ -1,0 +1,38 @@
+.dropdown-toggle::after {
+    display: none;
+}
+
+.nav-link.dropdown-toggle.show .bi.bi-chevron-down::before {
+    transform: rotate(180deg);
+  }
+.navbar-expand-lg .navbar-collapse {
+    justify-content: space-around;
+}
+header{
+    background-color: #a47dab;
+    display: grid;
+    justify-content: end;
+    text-wrap-mode: nowrap;
+    padding-right: 7rem
+}
+button.navbar-toggler{
+  padding-left: 78rem;
+}
+.nav-link{
+  color: black;
+}
+.nav-link:hover{
+  color: white;
+}
+.dropdown-menu{
+  background-color: #a47dab;
+}
+.dropdown-menu a{
+  color: black;
+}
+.dropdown-menu a:hover{
+  color: white;
+}
+.logo{
+  padding-left: 1rem;
+}
