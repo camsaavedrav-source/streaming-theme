@@ -14,7 +14,7 @@
  <?php the_content(); ?> 
 </section>
 <section>
-<div class="card" style="width: 18rem;">
+<div class="card tarjetas">
   <div class="card-header">
     Informacion
   </div>
@@ -23,6 +23,7 @@
     <li class="list-group-item">Fecha de estreno:<?php echo esc_html( get_field('fecha_de_estreno') ); ?></li>
     <li class="list-group-item">Álbum:<?php echo esc_html( get_field('album') ); ?></li>
     <li class="list-group-item">Compositor/es:<?php echo esc_html( get_field('compositor') ); ?></li>
+    <li class="list-group-item">
     <?php
 
 // Check rows exists.
@@ -43,12 +44,13 @@ if( have_rows('interpretes') ):
 else :
     // Do something...
 endif; ?>
-   <li class="list-group-item"><?php echo $sub_value;?>: <span><?php echo $sub_value2;?></span></li>
+  <?php echo $sub_value;?>: <span><?php echo $sub_value2;?>
+</span></li>
   </ul>
 </div>
 </section>
 <section> 
-<div>
+<div class="mt-5 mb-3 text-center">
 <h3>Letra Ingles</h3>
 <?php echo nl2br( get_field('letra_ingles') ); ?>    
 </div>   

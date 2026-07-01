@@ -40,3 +40,15 @@ a.post-edit-link{
 .bi.bi-info-circle:hover{
     color: #a3a3a3 !important;
 }
+.tarjetas{
+    width: 50%;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+ul.list-group.list-group-flush{
+    list-style: none;
+    padding-inline-start: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
