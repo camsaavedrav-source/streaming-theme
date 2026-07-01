@@ -1,7 +1,7 @@
 <footer id="colophon" class="footer pb-5">
     <div class="container">
         <div>
-            <div class="footer-bottom text-center">
+            <div class="footer-bottom text-center d-flex justify-content-center">
             
             <?php if ( is_active_sidebar( 'footer_1' ) ) : ?>
                 <?php dynamic_sidebar( 'footer_1' ); ?>
