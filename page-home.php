@@ -34,7 +34,7 @@ $activo = ($indice === 0) ? 'active' : '';
 $imagen_destacada = get_the_post_thumbnail_url(get_the_ID(), 'full');
 ?>
 <div class="carousel-item <?php echo $activo; ?>">
-<img src="<?php echo esc_url($imagen_destacada); ?>" class="d-block w-100" alt="<?php echo get_the_title(); ?>">
+<img src="<?php echo esc_url($imagen_destacada); ?>" class="d-block img-fluida" alt="<?php echo get_the_title(); ?>">
 <div class="carousel-caption d-none d-md-block">
   <h5><?php echo get_the_title(); ?></h5>
   <p><?php echo get_the_excerpt(); ?></p>

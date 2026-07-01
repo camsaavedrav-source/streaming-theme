@@ -9,7 +9,7 @@
             'orderby'        => 'date', 
             'order'          => 'ASC', 
             'paged'          => $paged, 
-            'posts_per_page' => 1, 
+            'posts_per_page' => 4, 
 
             'tax_query' => array(
                 array(

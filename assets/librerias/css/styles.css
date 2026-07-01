@@ -28,3 +28,15 @@ a.url.fn.n:hover{
 a.post-edit-link{
     color:#a3a3a3 !important;
 }
+.bi.bi-plus-circle{
+    color: white !important;
+}
+.bi.bi-plus-circle:hover{
+    color: #a3a3a3 !important;
+}
+.bi.bi-info-circle{
+    color: white !important;
+}
+.bi.bi-info-circle:hover{
+    color: #a3a3a3 !important;
+}
